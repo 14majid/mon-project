@@ -9,9 +9,9 @@
 }
 
 :root {
-    --first-color: #00367D;
-    --second-color: #FDD7A9;
-    --gradient-color: linear-gradient(#FDD7A9,#00367D);
+    --first-color: #26E05B;
+    --second-color: #FFF;
+    --gradient-color: linear-gradient(#FFF, #26E05B);
     --font-principal: 'Roboto', sans-serif;
     --secondary-font: 'Spinnaker', sans-serif;
     --color-font: #E1E6F0;

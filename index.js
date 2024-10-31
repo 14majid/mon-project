@@ -64,7 +64,7 @@ let interVal = setInterval(()=>{
     currentindex++;
   }
   mySlide(currentindex)
-}, 7000)
+}, 70000)
 
 ///////////////////////////////////////// HEADER END
 
