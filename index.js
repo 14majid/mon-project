@@ -24,9 +24,19 @@ closeBtn.addEventListener('click', () => {
 let currentindex = 0
 
 let allSlisde = document.querySelectorAll('.slides')
+console.log(allSlisde.length);
+
 
 let nextButtton = document.querySelector('[data-next-button]')
 let prevButtton = document.querySelector('[data-prev-button]')
+
+function mySlide(index) {
+  for(var i = 0; i < allSlisde.length; i++) {
+    allSlisde[i].style.display = 'none'
+  }
+
+  allSlisde[currentindex].style.display = 'block'
+}
 
 nextButtton.addEventListener('click', ()=> {
    if (currentindex === allSlisde.length - 1) {
@@ -49,13 +59,7 @@ prevButtton.addEventListener('click', ()=> {
 })
 
 
-function mySlide(index) {
-  for(var i = 0; i < allSlisde.length; i++) {
-    allSlisde[i].style.display = 'none'
-  }
 
-  allSlisde[currentindex].style.display = 'block'
-}
 
 let interVal = setInterval(()=>{
   if (currentindex === allSlisde.length - 1) {
@@ -64,7 +68,7 @@ let interVal = setInterval(()=>{
     currentindex++;
   }
   mySlide(currentindex)
-}, 70000)
+}, 5000)
 
 ///////////////////////////////////////// HEADER END
 

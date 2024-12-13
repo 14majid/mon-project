@@ -18,8 +18,13 @@
     line-height: 1.6;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-principal);
+}
+
 p {
     font-size: 1rem;
+    font-family: var(--secondary-font);
 }
 
 body {
@@ -29,7 +34,7 @@ body {
 /******** Navbar ********/
 #navbar {
     width: 100%;
-    z-index: 4;
+    z-index: 5;
     padding: 0px 176px;
     margin: 0;
     background-color: var(--first-color);
@@ -41,21 +46,26 @@ body {
 
 .logo {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .logo hr{
-    height: 20px;
+    height: 30px;
 }
 #logo-img {
     height: 56px;
     width: 88px;
-    padding-right: 16px;
 }
 
-.logo h4 a{
-    font-family: var(--font-principal);
+.logo h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-left: 16px;
+}
+.logo h4 a {
+    text-align: left;
+    font-family: var(--font-principal);
     color: var(--second-color);
 }
 
@@ -117,25 +127,38 @@ body {
 }
 
 
-/*********** Header ***********/
+/*********************************************************** Header ***************************/
 #head {
-    position: relative;
-    top: 0;
-    height: 100vh;
-    margin: auto;
+    width: 100%;
     color: var(--second-color);
+    position: relative;
+    right: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
+
+#head img{
+    width: 40%;
+    height: 100vh;
+}
+
+.slides-container {
+    width: 60%;
+}
+
 
 .slides {
     font-family: var(--font-principal);
+    padding: 64px;
     height: 100vh;
-    width: 100%;
     display: none;
 }
 
 .slides:nth-child(1) {
-    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image/front-image.jpg'); */
-    background-image: url('image/front-image.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://jkeducate.b-cdn.net/content/uploads/2024/05/classroom-2093744_1920.jpg');
     background-size: cover;
     object-fit: cover;
 }
@@ -152,9 +175,10 @@ body {
     object-fit: cover; 
 }
 
-h1 {
-    padding: 88px 0 0  176px;
-    font-size: 3.815rem;
+.slides h1 {
+    /* padding: 88px 0 0  176px; */
+    text-align: center;
+    font-size: 3.8rem;
 }
 
 #prev, #next {
@@ -185,19 +209,18 @@ h1 {
     to {width: 100%}
 }
 
+/* **************************************************HEADER END************************* */
 
 
 
 
-/******** Developement ********/
+/************************************ Developement ********************************/
 #dev {
     background-image: var(--gradient-color);
     color: var(--second-color);
     padding-bottom: 96px;
     height: 100%;
     width: 100%;
-    position: relative;
-    top: 20px;
 }
 
 .section1 {
@@ -209,6 +232,8 @@ h1 {
     padding: 32px 24px 64px;
     display: flex;
     flex-direction: row;
+    position: relative;
+    top: 20px;
 }
 
 .section1 img {
@@ -216,9 +241,7 @@ h1 {
     height: 100%;
     padding-right: 24px;
 }
-.section1 h4 {
-    font-family: var(--secondary-font);
-}
+
 .section1 h1 {
     font-size: 40px;
     font-family: var(--font-principal);
@@ -233,8 +256,9 @@ h1 {
 .section2 {
     margin: 112px 24px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     text-align: center;
 }
 .modif {
@@ -263,6 +287,7 @@ h1 {
 .modif h3 a {
     color: var(--firstcolor);
     font-family: var(--secondary-font);
+    font-size: 1.17rem;
 }
 
 .modif p {
@@ -306,7 +331,30 @@ h1 {
     margin:0 24px 24px 0;
 }
 
+/******************************************* DEVELOPEMENT END *************************************/
 
+
+/*************************** VIDEO SECTION *******************************/
+
+#video {
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#video video {
+    margin: 10px 15px;
+    border: 5px solid green;
+    transition: border 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+/*************************** VIDEO SECTION END ****************************/
 
 .orientation {
     margin: auto;
@@ -322,7 +370,7 @@ h1 {
 
 .ecole-orient {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     padding: 48px 24px 0;
 }
@@ -331,6 +379,7 @@ h1 {
     color: var(--second-color);
     font-size: 25px;
     height: 200px;
+    padding: 8px;
 }
 
 .ecaux:nth-child(1) {
@@ -396,7 +445,7 @@ h1 {
 #contact .first-contact div h4 i {
     padding-top: 3px;
     padding-right: 8px;
-    color: var(--first-color);
+    color: var(--second-color);
 }
 
 #contact .second-contact {
@@ -419,7 +468,7 @@ input {
 }
 input::placeholder {
     color: var(--first-color);
-    opacity: .2;
+    opacity: .4;
 }
 
 input:nth-child(1), input:nth-child(3) {
@@ -430,6 +479,7 @@ textarea {
     margin-top: 24px;
     padding: 8px;
     font-size: 20px;
+    width: 100%;
 }
 
 textarea::placeholder {
@@ -456,14 +506,16 @@ textarea::placeholder {
 
 
 
-.globe {
+footer {
     background-color: var(--second-color);
     color: var(--first-color);
     display: flex;
     flex-direction: column;
+
+    padding-top: 32px;
 }
 
-.globe img {
+footer img {
     align-self: center;
     height: 150px;
     width: 300px;
@@ -471,8 +523,9 @@ textarea::placeholder {
 
 #footer {
     display: flex;
-    justify-content: space-between;
-    padding: 54px 120px;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 54px 0;
 }
 
 .partenaire p, .partenaire h3  {
@@ -484,11 +537,11 @@ textarea::placeholder {
 }
 
 .social-media h5 {
-    padding-bottom: 24px;
+    padding-bottom: 16px;
 }
 
 .social-media a {
-    padding-right: 24px;
+    padding-right: 10px;
     color: var(--first-color);
 }
 
@@ -499,9 +552,11 @@ textarea::placeholder {
 .copy {
     color: var(--first-color);
     opacity: .5;
-    padding-top: 16px;
+    padding-top: 8px;
     text-align: center;
 }
+
+
 
 
 
@@ -546,49 +601,204 @@ textarea::placeholder {
         display: block;
     }
 
+    #head {
+        top: 56px;
+    }
+
+    #head img{
+        width: 35%;
+        height: 100vh;
+    }
+    
+    .slides-container {
+        width: 65%;
+    }
+    
+    .slides h1 {
+        /* padding: 88px 0 0  176px; */
+        text-align: center;
+        font-size: 1.9rem;
+    }
 
     .section1 {
-        display: flex;
+        width: 90%;
         flex-direction: column;
     }
-
+    
     .section1 img {
-        width: 100%;
+        width: 30%;
         height: 100%;
-        padding:0 0 16px 0;
+        padding-right: 8px;
+    }
+    .section1 h4 {
+        font-family: var(--secondary-font);
+    }
+    .section1 h1 {
+        font-size: 1.9rem;
+        font-family: var(--font-principal);
+        padding: 32px 0 48px 0;
+    }
+    .section1 p {
+        font-family: var(--secondary-font);
     }
 
 
+
+    .section2 {
+        margin: 112px 16px;
+        display: flex;
+    }
+    .modif {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: var(--second-color);
+        font-size: 25px;
+        /* margin-top: 16px; */
+        padding: 32px 5px 58px;
+        margin: 16px 10px 0;
+    }
+    
+    .modif:hover {
+        background-color: var(--second-color);
+        color: var(--first-color);
+    }
+    
+    
+    .modif h3 a {
+        color: var(--firstcolor);
+        font-family: var(--secondary-font);
+        font-size: 1.1rem;
+    }
+    
+    .modif p {
+        margin-top: 48px;
+        font-family: var(--secondary-font);
+        text-align: center;
+    }
+    
+    .modif i {
+        font-size: 40px;
+    }
+    
+
+    .section3 {
+        margin: auto;
+        width: 85%;
+    }
+    .section3 h3 {
+        font-size: 1.3rem;
+    }
+
+
+
+    .orientation h2{
+        text-align: center;
+        color: var(--first-color);
+        font-size: 1.9rem;
+    }
+    .ecaux {
+        color: var(--second-color);
+        font-size: 1.2rem;
+        height: 150px;
+        padding: 8px;
+    }
 
     #contact {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
+        padding: 64px 16px;
+    }
+    #contact .first-contact div p {
+        padding-left: 16px;
     }
 
-    #contact .first-contact {
+    #footer h2 {
+        font-size: 20px;
+    }
+    
+}
+
+
+@media screen and (max-width: 657px) {
+
+    #head img {
         width: 100%;
+        height: 100vh;
+    }
+
+    .slides-container {
+        display: none;
+    }
+
+    .section2 {
+        /* margin: 112px 16px; */
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
+        align-items: center;
         flex-wrap: wrap;
-        margin-bottom: 32px;
-    }
-
-    #contact .second-contact {
-        background-color: #0067FF;
-        width: 100%;
-        height: 90%;
-        padding: 104px 24px ;
     }
 
     input {
         width: 100%;
     }
+}
 
-    #footer {
+@media screen and (max-width: 390px) {
+
+    #navbar {
+        padding: 0px 15px;
+    }
+
+    .section3 {
+        padding: 10px;
+    }
+
+    .ecole-orient {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        padding: 48px 24px 0;
+    }
+
+    #contact {
         display: flex;
         justify-content: space-between;
-        padding: 54px 32px;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    #contact .first-contact {
+        width: 100%;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        color: var(--second-color);
+    }
+
+    #contact .first-contact div {
+        padding: 15px;
+    }
+
+
+    #contact .second-contact {
+        background-color: var(--second-color);
+        width: 100%;
+        height: 90%;
+        padding: 104px 24px ;
+    }
+    
+    
+    textarea::placeholder {
+        color: var(--first-color);
+        opacity: .2;
+    }
+    
+
+    #footer h2 {
+        font-size: 16px;
     }
 }

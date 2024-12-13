@@ -10,33 +10,3 @@ classes.forEach((classElement, index) => {
     }
   });
 });
-
-
-
-const bars = document.querySelector('.bars')
-const closeBtn = document.querySelector('.close-btn')
-const liste = document.querySelector('#navbar ul')
-
-bars.addEventListener('click', () => {
-  liste.style.width = '100%'
-})
-
-closeBtn.addEventListener('click', () => {
-  liste.style.width = '0'
-})
-
-anSpecial.addEventListener('mouseover', () => {
-  losy.forEach(los => {
-    los.style.display = 'block'
-  });
-})
-
-anSpecial.addEventListener('mouseout', () => {
-  losy.forEach(los => {
-    los.style.display = 'none'
-  });
-})
-
-let year = document.querySelector('.date')
-let date = new Date().getFullYear()
-year.innerHTML = date

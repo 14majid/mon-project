@@ -28,26 +28,29 @@ body {
     padding: 16px;
     margin: 16px 16px 150px;
     background-color: var(--first-color);
+    display: flex;
+    flex-direction: row;
 }
-.directeur h1 {
-    text-align: center;
-    padding: 16px 0 24px 0;
-    font-family: 'Roboto', 'sans-serif';
+.directeur img {
+    height: 300px;
+    width: 50%;
 }
 .directeur-body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     text-align: left;
+
+    padding: 0 0 0 24px;
+}
+.directeur-body h1 {
+    padding: 16px 0 24px 0;
+    font-family: 'Roboto', 'sans-serif';
 }
 .directeur-body p {
     font-family: 'Spinnaker', sans-serif;
     width: 60%;
-    padding: 0 0 0 24px;
 }
-.directeur-body img {
-    height: 300px;
-    width: 300px;
-}
+
 
 
 
@@ -73,7 +76,7 @@ body {
 
 #admin .teachers {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -89,23 +92,23 @@ body {
 
 
 @media screen and (max-width: 1000px) {
-    .directeur {
-        text-align: center;
-    }
-    .directeur-body {
-        margin-top: 40px;
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-    }
+
     .directeur-body p {
         font-family: 'Spinnaker', sans-serif;
-        width: 100%;
-        padding: 30px 0px;
-    }
-    .directeur-body img {
-        height: 300px;
         width: 100%;
     }
 }
 
+@media screen and (max-width: 657px) {
+
+   .directeur {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .directeur img {
+        height: auto;
+        width: 100%;
+    }
+}

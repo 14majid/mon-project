@@ -18,8 +18,8 @@
 #info {
     text-align: center;
     width: 100%;
-    background-color: var(--first-color);
-    color: var(--second-color);
+    background-color: var(--second-color);
+    color: var(--first-color);
     padding: 240px 0;
 }
 
